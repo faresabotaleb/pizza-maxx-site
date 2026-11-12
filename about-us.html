@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>عن ماكس | قصة بيتزا ماكس — خلّي مزاجك ماكس</title>
+<meta name="description" content="قصة بيتزا ماكس: مطعم وجبات سريعة افتُتح في ١٣ يوليو ٢٠١٧ في المنصورة على يد الشيف محمد عبدالله، بخبرة عالمية بين مصر ولبنان وألمانيا. رؤيتنا، رسالتنا، وقصة الشغف وراء طعم الفرحة.">
+<meta name="theme-color" content="#0A0A0C">
+<meta property="og:title" content="عن ماكس | قصة بيتزا ماكس">
+<meta property="og:description" content="من خبرة عالمية لقلب المنصورة — قصة الشيف محمد عبدالله وبيتزا ماكس.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Cairo:wght@400;600;700;800;900&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/styles.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍕</text></svg>">
+<style>
+  /* ---- About-page specific ---- */
+  .page-hero { position: relative; min-height: 74svh; display: flex; align-items: flex-end; padding: calc(var(--nav-h) + 40px) 0 60px; overflow: hidden; }
+  .page-hero-bg { position: absolute; inset: 0; z-index: -1; }
+  .page-hero-bg img { width: 100%; height: 100%; object-fit: cover; }
+  .page-hero-bg::after { content:""; position:absolute; inset:0; background: linear-gradient(to top, var(--ink) 6%, rgba(10,10,12,.55) 55%, rgba(10,10,12,.75)); }
+  .page-hero h1 { font-family: var(--f-head); font-weight: 900; color: var(--cream); font-size: clamp(38px, 7vw, 84px); line-height: 1.03; letter-spacing: -.02em; margin: 14px 0 18px; }
+  .page-hero p { color: var(--muted); font-size: clamp(16px, 2vw, 20px); max-width: 62ch; margin: 0; }
+  .breadcrumb { display: flex; gap: 8px; align-items: center; color: var(--faint); font-family: var(--f-head); font-weight: 600; font-size: 14px; }
+  .breadcrumb a:hover { color: var(--cheese); }
+
+  .mv-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+  .mv-card { padding: 34px; border-radius: var(--r-lg); background: linear-gradient(180deg, var(--graphite), var(--charcoal)); border: 1px solid var(--hair-soft); }
+  .mv-card .mv-ico { width: 58px; height: 58px; border-radius: 16px; display: grid; place-items: center; margin-bottom: 18px; }
+  .mv-card .mv-ico svg { width: 28px; height: 28px; }
+  .mv-mission .mv-ico { background: rgba(255,59,46,.12); } .mv-mission .mv-ico svg { color: var(--red); }
+  .mv-vision .mv-ico { background: rgba(76,198,106,.12); } .mv-vision .mv-ico svg { color: var(--green); }
+  .mv-card h3 { font-family: var(--f-head); font-weight: 900; font-size: 24px; color: var(--cream); margin: 0 0 10px; }
+  .mv-card p { color: var(--muted); font-size: 16px; margin: 0; line-height: 1.8; }
+
+  /* founder */
+  .founder-badge { display: inline-flex; align-items: center; gap: 10px; padding: 8px 16px; border-radius: var(--r-pill); background: rgba(255,196,46,.12); color: var(--cheese); font-family: var(--f-head); font-weight: 800; font-size: 14px; margin-bottom: 18px; }
+  .founder-badge svg { width: 18px; height: 18px; }
+  .medal-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+  .medal { display: flex; align-items: center; gap: 10px; padding: 12px 16px; border-radius: var(--r-md); background: var(--glass); border: 1px solid var(--hair); font-family: var(--f-head); font-weight: 700; color: var(--cream); font-size: 14px; }
+  .medal svg { width: 20px; height: 20px; color: var(--cheese); flex-shrink: 0; }
+
+  /* timeline */
+  .timeline { position: relative; max-width: 820px; margin-inline: auto; padding-inline-start: 4px; }
+  .timeline::before { content:""; position: absolute; inset-inline-start: 20px; top: 8px; bottom: 8px; width: 2px; background: linear-gradient(var(--red), var(--cheese)); opacity: .5; }
+  .tl-item { position: relative; padding-inline-start: 56px; padding-bottom: 34px; }
+  .tl-item:last-child { padding-bottom: 0; }
+  .tl-dot { position: absolute; inset-inline-start: 11px; top: 2px; width: 20px; height: 20px; border-radius: 50%; background: var(--red); border: 3px solid var(--ink); box-shadow: 0 0 0 3px rgba(255,59,46,.25); }
+  .tl-item:nth-child(even) .tl-dot { background: var(--cheese); box-shadow: 0 0 0 3px rgba(255,196,46,.25); }
+  .tl-year { font-family: var(--f-display); font-size: 24px; color: var(--cheese); line-height: 1; margin-bottom: 6px; }
+  .tl-item h4 { font-family: var(--f-head); font-weight: 800; font-size: 19px; color: var(--cream); margin: 0 0 6px; }
+  .tl-item p { color: var(--muted); font-size: 15px; margin: 0; }
+
+  /* kitchen gallery */
+  .kitchen-grid { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 200px; gap: 14px; }
+  .kitchen-grid a { border-radius: var(--r-md); overflow: hidden; position: relative; }
+  .kitchen-grid img { width: 100%; height: 100%; object-fit: cover; transition: transform .8s var(--ease-out); }
+  .kitchen-grid a:hover img { transform: scale(1.08); }
+  .kitchen-grid .k-lg { grid-column: span 2; grid-row: span 2; }
+  @media (max-width: 860px) {
+    .mv-grid { grid-template-columns: 1fr; }
+    .kitchen-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 150px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="container">
+    <a href="/index.html" class="brand" aria-label="بيتزا ماكس">
+      <img src="/assets/logo.png" alt="بيتزا ماكس" class="brand-img">
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="/index.html#menu">المنيو</a>
+      <a href="/index.html#best">الأكثر طلباً</a>
+      <a href="/index.html#offers">العروض</a>
+      <a href="/menu/">المنيو الورقي</a>
+      <a href="/about-us.html">عن ماكس</a>
+      <a href="/index.html#reviews">آراء العملاء</a>
+      <a href="/index.html#branches">الفرع</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="tel:01024959557" class="nav-phone">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.4-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></svg>
+        01024959557
+      </a>
+      <a href="/index.html#menu" class="btn btn-primary btn-sm">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg>
+        اطلب الآن
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="القائمة"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ PAGE HERO ============ -->
+<section class="page-hero">
+  <div class="page-hero-bg"><img src="/assets/img/m-dream.jpg" alt="بيتزا ماكس"></div>
+  <div class="container">
+    <div class="reveal">
+      <div class="breadcrumb"><a href="/index.html">الرئيسية</a> <span>/</span> <span class="text-cheese">عن ماكس</span></div>
+      <h1>قصة <span class="text-cheese">بيتزا ماكس</span></h1>
+      <p>خبرة عالمية بين مصر ولبنان وألمانيا… وصلت لقلب المنصورة سنة ٢٠١٧ عشان تقدّملك طعم الفرحة اللي بيتكلم من أول قضمة. دي حكايتنا.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STORY ============ -->
+<section class="section">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-media reveal">
+        <img src="/assets/img/m-meal-topgrill.jpg" alt="أطباق بيتزا ماكس">
+        <div class="glass-quote"><p>“طعم الفرحة بيتكلم — من أول قضمة”</p></div>
+      </div>
+      <div class="reveal" data-d="1">
+        <p class="eyebrow">قصتنا</p>
+        <h2 class="section-title">شغف بدأ سنة<br><span class="text-red">٢٠١٧</span></h2>
+        <p style="color:var(--muted);font-size:17px;margin-bottom:16px">بيتزا ماكس مطعم متخصّص في الوجبات السريعة، افتتح أبوابه في <b style="color:var(--cream)">١٣ يوليو ٢٠١٧</b> في قلب المنصورة، على يد الشيف <b style="color:var(--cream)">محمد عبدالله</b> — صاحب خبرة عالمية في المطبخ امتدّت لأكتر من ٢٥ سنة.</p>
+        <p style="color:var(--muted);font-size:17px;margin-bottom:16px">من أول يوم واحنا شايفين إن الأكل مش مجرد وجبة — ده تجربة. عشان كده كل عجينة، كل صوص، وكل طبق بيتحضّر بأجود المكونات وبنفس الشغف اللي بدأنا بيه.</p>
+        <p style="color:var(--muted);font-size:17px">النتيجة؟ طعم فريد بيجمع بين الاحتراف العالمي والروح المصرية الدافية… ويخلّي مزاجك ماكس.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOUNDER ============ -->
+<section class="section" style="background:linear-gradient(180deg,transparent,rgba(18,18,21,.5),transparent)">
+  <div class="container">
+    <div class="about-grid">
+      <div class="reveal">
+        <div class="founder-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg>
+          الشيف المؤسّس
+        </div>
+        <h2 class="section-title">الشيف <span class="text-cheese">محمد عبدالله</span></h2>
+        <p style="color:var(--muted);font-size:17px;margin-bottom:16px">بدأ الشيف محمد رحلته بدبلومة في السياحة والفنادق سنة ١٩٩٨، واشتغل في مصر سنتين، بعدها سافر لبنان واشتغل ٧ سنين في مطاعم مشهورة زي <b style="color:var(--cream)">مايريك</b> و<b style="color:var(--cream)">دزار</b> المتخصّصين في الأكلات الأرمنية.</p>
+        <p style="color:var(--muted);font-size:17px;margin-bottom:16px">بعدها انتقل لألمانيا واشتغل ٥ سنين في مجال الوجبات السريعة، متخصّص في تحضير البيتزا والمكرونة، وكمان اشتغل في تكا أمريكانا بالإسكندرية.</p>
+        <p style="color:var(--muted);font-size:17px">رجع مصر وأتقن مهنته لحد ما حصل على <b style="color:var(--cream)">شهادة الطباخ الماهر سنة ٢٠٠٥</b>، وكل الخبرة دي بقت في كل طبق بنقدّمه في ماكس.</p>
+        <div class="medal-row">
+          <div class="medal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M8.2 13.9L7 22l5-3 5 3-1.2-8.1"/></svg> ميدالية فضية — مسابقة HORECA الدولية</div>
+          <div class="medal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 17.3 5.8 20.9l1.6-6.8L2.2 8.9l6.9-.6z"/></svg> المركز الثاني عالميًا</div>
+          <div class="medal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg> شهادة الطباخ الماهر ٢٠٠٥</div>
+        </div>
+      </div>
+      <div class="about-media reveal" data-d="1">
+        <img src="/assets/img/m-pasta-siracha.jpg" alt="من مطبخ الشيف محمد">
+        <div class="glass-quote"><p>“خبرة ٣ دول… في طبق واحد”</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MISSION / VISION ============ -->
+<section class="section">
+  <div class="container">
+    <div class="section-head center reveal">
+      <p class="eyebrow" style="justify-content:center">مبادئنا</p>
+      <h2 class="section-title">اللي بنشتغل <span class="text-red">عشانه</span></h2>
+    </div>
+    <div class="mv-grid">
+      <div class="mv-card mv-mission reveal">
+        <div class="mv-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13"/><path d="M22 2l-7 20-4-9-9-4 20-7z"/></svg></div>
+        <h3>رسالتنا</h3>
+        <p>نسعى لتقديم أشهى وألذّ البيتزا والوجبات السريعة باستخدام أفضل المكونات الطازجة، مع الحرص على الجودة والنكهة والابتكار في كل طبق. نحرص على تجربة عملاء رائعة تتجاوز توقعاتهم، بخدمة مميزة وجو دافئ وودّي — وملتزمون بالتطوير المستمر لنكون الأفضل في مجالنا.</p>
+      </div>
+      <div class="mv-card mv-vision reveal" data-d="1">
+        <div class="mv-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></div>
+        <h3>رؤيتنا</h3>
+        <p>أن نصبح الوجهة الأولى والمفضّلة لعشّاق البيتزا والوجبات السريعة على مستوى المنطقة، من خلال تقديم أفضل جودة للأطعمة والمكونات، وتجربة تناول طعام استثنائية تلبّي تطلّعات عملائنا وتحظى برضاهم التام.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VALUES ============ -->
+<section class="section" style="background:linear-gradient(180deg,transparent,rgba(18,18,21,.5),transparent)">
+  <div class="container">
+    <div class="section-head center reveal">
+      <p class="eyebrow" style="justify-content:center">قيمنا</p>
+      <h2 class="section-title">جودة تحسّها في كل <span class="text-green">لقمة</span></h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2z"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><circle cx="9" cy="9" r="1"/><circle cx="15" cy="9" r="1"/></svg></div>
+        <h3>مكونات مختارة</h3>
+        <p>أجبان طبيعية، صوصات محضّرة عندنا، وخضار طازة — أفضل جودة في كل طبق.</p>
+      </div>
+      <div class="why-card reveal" data-d="1">
+        <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 13.87A4 4 0 0 1 7.41 6a5.11 5.11 0 0 1 1.05-1.54 5 5 0 0 1 7.08 0A5.11 5.11 0 0 1 16.59 6 4 4 0 0 1 18 13.87V21H6z"/><path d="M6 17h12"/></svg></div>
+        <h3>عجينة طازة</h3>
+        <p>بنعجن كل يوم بالصبح ونخمّرها ببطء عشان تطلع هشة ومقرمشة.</p>
+      </div>
+      <div class="why-card reveal" data-d="2">
+        <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg></div>
+        <h3>خبرة عالمية</h3>
+        <p>وصفات جمعت بين مصر ولبنان وألمانيا بأيدين شيف محترف.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.9 6.3 6.9.6-5.2 4.6 1.6 6.8L12 17.3 5.8 20.9l1.6-6.8L2.2 8.9l6.9-.6z"/></svg></div>
+        <h3>جودة ونظافة</h3>
+        <p>معايير نظافة صارمة في كل مرحلة عشان تطمن على أكلك.</p>
+      </div>
+      <div class="why-card reveal" data-d="1">
+        <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+        <h3>توصيل سريع</h3>
+        <p>متوسط التوصيل ٤٥ دقيقة، والأكل بيوصلك سخن في تغليف محترم.</p>
+      </div>
+      <div class="why-card reveal" data-d="2">
+        <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+        <h3>أسعار عادلة</h3>
+        <p>طعم عالمي بسعر مناسب لكل العيلة والطلبة، وعروض توفير دايمة.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STATS ============ -->
+<section class="section" style="padding-block:clamp(40px,6vw,72px)">
+  <div class="container">
+    <div class="about-stats reveal" style="grid-template-columns:repeat(4,1fr);margin-top:0">
+      <div class="about-stat"><b>٢٠١٧</b><span>سنة التأسيس</span></div>
+      <div class="about-stat"><b data-count="25" data-suffix="+">0</b><span>سنة خبرة الشيف</span></div>
+      <div class="about-stat"><b>٤.٩</b><span>تقييم جوجل</span></div>
+      <div class="about-stat"><b data-count="70" data-suffix="+">0</b><span>صنف مميز</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ JOURNEY / TIMELINE ============ -->
+<section class="section" style="background:linear-gradient(180deg,transparent,rgba(18,18,21,.5),transparent)">
+  <div class="container">
+    <div class="section-head center reveal">
+      <p class="eyebrow" style="justify-content:center">رحلتنا</p>
+      <h2 class="section-title">رحلة شغف… من <span class="text-cheese">١٩٩٨</span></h2>
+    </div>
+    <div class="timeline">
+      <div class="tl-item reveal"><span class="tl-dot"></span>
+        <div class="tl-year">١٩٩٨</div>
+        <h4>بداية الطريق</h4>
+        <p>الشيف محمد عبدالله يحصل على دبلومة في السياحة والفنادق، ويبدأ مشواره في مصر.</p>
+      </div>
+      <div class="tl-item reveal"><span class="tl-dot"></span>
+        <div class="tl-year">لبنان · ٧ سنوات</div>
+        <h4>إتقان الأكل الأرمني</h4>
+        <p>خبرة في مطاعم مشهورة زي مايريك ودزار المتخصّصين في المطبخ الأرمني.</p>
+      </div>
+      <div class="tl-item reveal"><span class="tl-dot"></span>
+        <div class="tl-year">ألمانيا · ٥ سنوات</div>
+        <h4>تخصّص البيتزا والمكرونة</h4>
+        <p>احتراف في مجال الوجبات السريعة وتحضير البيتزا والمكرونة على الطريقة العالمية.</p>
+      </div>
+      <div class="tl-item reveal"><span class="tl-dot"></span>
+        <div class="tl-year">٢٠٠٥</div>
+        <h4>الطباخ الماهر</h4>
+        <p>شهادة الطباخ الماهر، والمركز الثاني والميدالية الفضية في مسابقة HORECA الدولية.</p>
+      </div>
+      <div class="tl-item reveal"><span class="tl-dot"></span>
+        <div class="tl-year">١٣ يوليو ٢٠١٧</div>
+        <h4>ميلاد بيتزا ماكس</h4>
+        <p>افتتاح أول فرع في قلب المنصورة — كل الخبرة دي في مكان واحد.</p>
+      </div>
+      <div class="tl-item reveal"><span class="tl-dot"></span>
+        <div class="tl-year">النهاردة</div>
+        <h4>وجهة عشّاق البيتزا</h4>
+        <p>اختيار العيلات والطلبة في المنصورة، وطعم بيتكلم عن نفسه — خلّي مزاجك ماكس.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ KITCHEN GALLERY ============ -->
+<section class="section">
+  <div class="container">
+    <div class="section-head center reveal">
+      <p class="eyebrow" style="justify-content:center">من مطبخنا</p>
+      <h2 class="section-title">شغف بيتحوّل <span class="text-red">لطعم</span></h2>
+    </div>
+    <div class="kitchen-grid reveal">
+      <a class="k-lg" href="/index.html#menu"><img src="/assets/img/m-chicken-ranch.jpg" alt="بيتزا تشيكن رانش" loading="lazy"></a>
+      <a href="/index.html#menu"><img src="/assets/img/m-wings.jpg" alt="أجنحة دجاج" loading="lazy"></a>
+      <a href="/index.html#menu"><img src="/assets/img/m-pasta-siracha.jpg" alt="مكرونة سيراتشا" loading="lazy"></a>
+      <a href="/index.html#menu"><img src="/assets/img/m-chili-fries.jpg" alt="سمبوسة" loading="lazy"></a>
+      <a href="/index.html#menu"><img src="/assets/img/m-pepperoni.jpg" alt="بيتزا بيبروني" loading="lazy"></a>
+      <a href="/index.html#menu"><img src="/assets/img/m-mixmeat.jpg" alt="بيتزا ميكس لحوم" loading="lazy"></a>
+      <a href="/index.html#menu"><img src="/assets/img/m-meal-smoky.jpg" alt="أجنحة باربكيو" loading="lazy"></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA BAND ============ -->
+<section class="section" style="padding-top:0">
+  <div class="container">
+    <div class="cta-band reveal">
+      <div class="cta-band-bg"><img src="/assets/img/m-mixmeat.jpg" alt=""></div>
+      <h2>جاهز تجرّب<br>طعم الفرحة؟</h2>
+      <p>اطلب دلوقتي واستمتع بأشهى بيتزا ومكرونة توصلك سخنة لحد باب بيتك.</p>
+      <div class="hero-cta" style="justify-content:center">
+        <a href="/index.html#menu" class="btn btn-cheese">اطلب دلوقتي</a>
+        <a href="https://wa.me/201070336868" target="_blank" rel="noopener" class="btn btn-ghost">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.8-.6-3-1.3-5-4.4-5.2-4.6-.1-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.1.1.3 0 .5l-.4.6c-.1.2-.3.3-.1.6.1.3.7 1.1 1.4 1.8.9.8 1.7 1 2 1.2.2.1.4.1.5-.1l.7-.8c.2-.2.4-.2.6-.1l1.9.9c.2.1.4.2.4.3.1.2.1.6 0 1z"/></svg>
+          واتساب
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="/assets/logo.png" alt="بيتزا ماكس" class="brand-img">
+        <p>بيتزا وباستا وساندويتشات بطعم يشعل الفرحة. من قلب المنصورة لكل بيت — منذ ٢٠١٧.</p>
+        <div class="socials">
+          <a href="https://facebook.com/Pizzamaxx0502507072" target="_blank" rel="noopener" class="social" aria-label="فيسبوك"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="https://instagram.com" target="_blank" rel="noopener" class="social" aria-label="انستجرام"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+          <a href="https://wa.me/201070336868" target="_blank" rel="noopener" class="social" aria-label="واتساب"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.8-.6-3-1.3-5-4.4-5.2-4.6-.1-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.1.1.3 0 .5l-.4.6c-.1.2-.3.3-.1.6.1.3.7 1.1 1.4 1.8.9.8 1.7 1 2 1.2.2.1.4.1.5-.1l.7-.8c.2-.2.4-.2.6-.1l1.9.9c.2.1.4.2.4.3.1.2.1.6 0 1z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>روابط سريعة</h4>
+        <ul class="footer-links">
+          <li><a href="/index.html#menu">المنيو</a></li>
+          <li><a href="/index.html#offers">العروض</a></li>
+          <li><a href="/menu/">المنيو الورقي</a></li>
+          <li><a href="/about-us.html">عن ماكس</a></li>
+          <li><a href="/index.html#branches">الفرع</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>المنيو</h4>
+        <ul class="footer-links">
+          <li><a href="/index.html#menu">بيتزا</a></li>
+          <li><a href="/index.html#menu">مكرونة</a></li>
+          <li><a href="/index.html#menu">ساندوتش</a></li>
+          <li><a href="/index.html#menu">أطباق جانبية</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>تواصل معنا</h4>
+        <ul class="footer-contact">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.4-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></svg> <a href="tel:01016171992">01016171992</a> · <a href="tel:01024959557">01024959557</a></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> يومياً ١٢ ظهراً – ٢:٣٠ ص</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> شارع عبد المنعم رياض، بجوار مدرسة الملك الكامل — المنصورة</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> بيتزا ماكس — جميع الحقوق محفوظة.</span>
+      <span>صُمّم بحب 🍕 · خلّي مزاجك ماكس</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/201070336868" target="_blank" rel="noopener" class="wa-float" aria-label="تواصل واتساب">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.8-.6-3-1.3-5-4.4-5.2-4.6-.1-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.1.1.3 0 .5l-.4.6c-.1.2-.3.3-.1.6.1.3.7 1.1 1.4 1.8.9.8 1.7 1 2 1.2.2.1.4.1.5-.1l.7-.8c.2-.2.4-.2.6-.1l1.9.9c.2.1.4.2.4.3.1.2.1.6 0 1z"/></svg>
+</a>
+
+<script>
+(function () {
+  "use strict";
+  const $  = (s, c=document) => c.querySelector(s);
+  const $$ = (s, c=document) => Array.from(c.querySelectorAll(s));
+  const AR = n => n.toLocaleString('ar-EG');
+
+  const nav = $('#nav'), progress = $('#scrollProgress');
+  function onScroll() {
+    nav.classList.toggle('scrolled', window.scrollY > 30);
+    const h = document.documentElement.scrollHeight - window.innerHeight;
+    progress.style.transform = `scaleX(${h > 0 ? window.scrollY/h : 0})`;
+  }
+  onScroll(); window.addEventListener('scroll', onScroll, { passive:true });
+
+  $('#navToggle').addEventListener('click', () => nav.classList.toggle('open'));
+  $$('#navLinks a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
+
+  const heroBg = $('.page-hero-bg img');
+  if (heroBg && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    window.addEventListener('scroll', () => {
+      const y = window.scrollY;
+      if (y < window.innerHeight) heroBg.style.transform = `scale(1.08) translateY(${y*0.14}px)`;
+    }, { passive:true });
+  }
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  $$('.reveal').forEach(el => io.observe(el));
+
+  const countUp = el => {
+    const target = +el.dataset.count, suffix = el.dataset.suffix || '', dur = 1400;
+    const t0 = performance.now();
+    const step = now => {
+      const p = Math.min(1, (now - t0) / dur);
+      el.textContent = AR(Math.floor((1 - Math.pow(1-p,3)) * target)) + suffix;
+      if (p < 1) requestAnimationFrame(step);
+    };
+    requestAnimationFrame(step);
+  };
+  const co = new IntersectionObserver((entries) => {
+    entries.forEach(en => { if (en.isIntersecting) { countUp(en.target); co.unobserve(en.target); } });
+  }, { threshold: 0.5 });
+  $$('[data-count]').forEach(el => co.observe(el));
+
+  $('#year').textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>

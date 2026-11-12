@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>المنيو الورقي | Pizza Maxx — خلّي مزاجك ماكس</title>
+<meta name="description" content="شوف منيو بيتزا ماكس الورقي كامل بالصور والأسعار — PDF قابل للتصفح أو التحميل.">
+<meta name="theme-color" content="#0A0A0C">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Cairo:wght@400;600;700;800;900&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/css/styles.css">
+<link rel="stylesheet" href="/assets/css/vendor/page-flip.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍕</text></svg>">
+<style>
+  .pdf-hero { padding: calc(var(--nav-h) + 40px) 0 20px; text-align: center; }
+  .pdf-hero .breadcrumb { display: flex; gap: 8px; align-items: center; justify-content: center; color: var(--faint); font-family: var(--f-head); font-weight: 600; font-size: 14px; margin-bottom: 14px; }
+  .pdf-hero .breadcrumb a:hover { color: var(--cheese); }
+  .pdf-hero h1 { font-family: var(--f-head); font-weight: 900; color: var(--cream); font-size: clamp(30px, 5vw, 52px); margin: 0 0 12px; }
+  .pdf-hero p { color: var(--muted); font-size: clamp(15px, 1.8vw, 18px); max-width: 56ch; margin: 0 auto 26px; }
+  .pdf-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-bottom: 8px; }
+
+  /* ---------- Flipbook ---------- */
+  .book-stage { margin: 36px auto 0; max-width: 920px; }
+  .book-wrap {
+    display: flex; justify-content: center; padding: clamp(20px, 4vw, 48px) clamp(10px, 3vw, 40px);
+    border-radius: var(--r-xl); border: 1px solid var(--hair); box-shadow: var(--sh-3);
+    background:
+      radial-gradient(120% 100% at 50% 0%, rgba(255,59,46,.08), transparent 60%),
+      var(--charcoal);
+  }
+  #flipbook { touch-action: pan-y pinch-zoom; }
+  #flipbook .stf__item { background: #fff; box-shadow: 0 4px 24px rgba(0,0,0,.35); }
+  #flipbook img { width: 100%; height: 100%; object-fit: cover; display: block; user-select: none; -webkit-user-drag: none; }
+
+  .book-controls { display: flex; align-items: center; justify-content: center; gap: 18px; margin-top: 24px; }
+  .book-nav-btn {
+    width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center; flex-shrink: 0;
+    background: var(--glass); border: 1px solid var(--hair); color: var(--cream); transition: .25s var(--ease);
+  }
+  .book-nav-btn:hover:not(:disabled) { background: var(--red); border-color: transparent; transform: scale(1.06); }
+  .book-nav-btn:disabled { opacity: .35; pointer-events: none; }
+  .book-nav-btn svg { width: 20px; height: 20px; }
+  .book-page-count { font-family: var(--f-head); font-weight: 700; font-size: 15px; color: var(--muted); min-width: 84px; text-align: center; }
+  .book-page-count b { color: var(--cheese); font-family: var(--f-display); font-size: 18px; }
+  .book-hint { text-align: center; color: var(--faint); font-size: 13px; margin-top: 14px; }
+
+  /* ---------- Zoom lightbox (full-res image, no canvas pixelation) ---------- */
+  .lightbox {
+    display: none; position: fixed; inset: 0; z-index: 999; background: rgba(6,6,8,.94);
+    align-items: center; justify-content: center; padding: 60px 16px; overflow: auto; touch-action: pan-x pan-y pinch-zoom;
+  }
+  .lightbox.open { display: flex; }
+  .lightbox img { max-width: none; width: min(94vw, 700px); height: auto; border-radius: 10px; box-shadow: var(--sh-3); touch-action: pan-x pan-y pinch-zoom; }
+  .lightbox-close {
+    position: fixed; top: 16px; inset-inline-end: 16px; width: 44px; height: 44px; border-radius: 50%;
+    background: var(--glass); border: 1px solid var(--hair); color: var(--cream); display: grid; place-items: center; z-index: 1000;
+  }
+  .lightbox-close svg { width: 20px; height: 20px; }
+
+  /* fallback shown only if the flipbook script fails to initialize */
+  .book-fallback { display: none; }
+  .book-fallback.show {
+    display: flex; flex-direction: column; align-items: center; gap: 16px; text-align: center;
+    max-width: 460px; margin: 0 auto; padding: 40px 26px; border-radius: var(--r-xl);
+    border: 1px solid var(--hair-soft); background: linear-gradient(180deg, var(--graphite), var(--charcoal));
+  }
+  .book-fallback svg { width: 60px; height: 60px; color: var(--red); }
+  .book-fallback h3 { font-family: var(--f-head); font-weight: 800; font-size: 18px; color: var(--cream); margin: 0; }
+  .book-fallback p { color: var(--muted); font-size: 14px; margin: 0; }
+
+  @media (max-width: 560px) {
+    .book-nav-btn { width: 40px; height: 40px; }
+    .book-controls { gap: 12px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <div class="container">
+    <a href="/index.html#top" class="brand" aria-label="بيتزا ماكس">
+      <img src="/assets/logo.png" alt="بيتزا ماكس" class="brand-img">
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="/index.html#menu">المنيو</a>
+      <a href="/index.html#offers">العروض</a>
+      <a href="/menu/">المنيو الورقي</a>
+      <a href="/about-us.html">عن ماكس</a>
+      <a href="/index.html#reviews">آراء العملاء</a>
+      <a href="/index.html#branches">الفروع</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="tel:01024959557" class="nav-phone">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.4-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></svg>
+        01024959557
+      </a>
+      <a href="/index.html#menu" class="btn btn-primary btn-sm">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg>
+        اطلب الآن
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="القائمة"><span></span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="pdf-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="/index.html">الرئيسية</a> <span>/</span> <span class="text-cheese">المنيو الورقي</span></div>
+    <h1>المنيو الورقي <span class="text-red">الكامل</span></h1>
+    <p>شوف كل أصناف بيتزا ماكس بالصور والأسعار في ملف واحد — تقدر تتصفحه هنا أو تحمّله على جهازك.</p>
+    <div class="pdf-actions">
+      <a href="/assets/pdf/maxx-menu.pdf" download class="btn btn-primary">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/></svg>
+        تحميل المنيو PDF
+      </a>
+      <a href="/assets/pdf/maxx-menu.pdf" target="_blank" rel="noopener" class="btn btn-ghost">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14L21 3"/></svg>
+        فتح في تبويب جديد
+      </a>
+    </div>
+
+    <!-- Interactive flipbook (falls back to a PDF prompt if the script can't init) -->
+    <div class="book-stage">
+      <div class="book-wrap">
+        <div id="flipbook"></div>
+      </div>
+      <div class="book-controls">
+        <button type="button" class="book-nav-btn" id="bookNext" aria-label="الصفحة التالية">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M15 18l-6-6 6-6"/></svg>
+        </button>
+        <span class="book-page-count"><b id="bookCur">١</b> / <span id="bookTotal">٦</span></span>
+        <button type="button" class="book-nav-btn" id="bookPrev" aria-label="الصفحة السابقة">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+        <button type="button" class="book-nav-btn" id="bookZoom" aria-label="تكبير الصفحة">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/><path d="M11 8v6M8 11h6"/></svg>
+        </button>
+      </div>
+      <p class="book-hint">اسحب أو دوس على طرف الصفحة لتقليبها — أو دوس 🔍 لعرض الصفحة بجودة كاملة وتكبيرها 📖</p>
+
+      <div class="book-fallback" id="bookFallback">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
+        <h3>افتح المنيو بصيغة PDF</h3>
+        <p>المتصفح ده مش بيدعم عرض الكتاب التفاعلي — افتح أو حمّل الملف مباشرة من الأزرار فوق.</p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<div class="lightbox" id="lightbox">
+  <button type="button" class="lightbox-close" id="lightboxClose" aria-label="إغلاق">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+  </button>
+  <img id="lightboxImg" src="" alt="صفحة المنيو مكبّرة">
+</div>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="/assets/logo.png" alt="بيتزا ماكس" class="brand-img">
+        <p>بيتزا وباستا وساندويتشات بطعم يشعل الفرحة. من قلب المنصورة لكل بيت — منذ ٢٠١٧.</p>
+        <div class="socials">
+          <a href="https://facebook.com/Pizzamaxx0502507072" target="_blank" rel="noopener" class="social" aria-label="فيسبوك"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="https://instagram.com" target="_blank" rel="noopener" class="social" aria-label="انستجرام"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+          <a href="https://wa.me/201070336868" target="_blank" rel="noopener" class="social" aria-label="واتساب"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.8-.6-3-1.3-5-4.4-5.2-4.6-.1-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.1.1.3 0 .5l-.4.6c-.1.2-.3.3-.1.6.1.3.7 1.1 1.4 1.8.9.8 1.7 1 2 1.2.2.1.4.1.5-.1l.7-.8c.2-.2.4-.2.6-.1l1.9.9c.2.1.4.2.4.3.1.2.1.6 0 1z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>روابط سريعة</h4>
+        <ul class="footer-links">
+          <li><a href="/index.html#menu">المنيو</a></li>
+          <li><a href="/index.html#offers">العروض</a></li>
+          <li><a href="/menu/">المنيو الورقي</a></li>
+          <li><a href="/about-us.html">عن ماكس</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>المنيو</h4>
+        <ul class="footer-links">
+          <li><a href="/index.html#menu">بيتزا</a></li>
+          <li><a href="/index.html#menu">مكرونة</a></li>
+          <li><a href="/index.html#menu">ساندوتش</a></li>
+          <li><a href="/index.html#menu">أطباق جانبية</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>تواصل معنا</h4>
+        <ul class="footer-contact">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.4-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></svg> <a href="tel:01016171992">01016171992</a> · <a href="tel:01024959557">01024959557</a></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> يومياً ١٢ ظهراً – ٢:٣٠ ص</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> شارع عبد المنعم رياض، بجوار مدرسة الملك الكامل — المنصورة</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> بيتزا ماكس — جميع الحقوق محفوظة.</span>
+      <span>صُمّم بحب 🍕 · خلّي مزاجك ماكس</span>
+    </div>
+  </div>
+</footer>
+
+<a href="https://wa.me/201070336868" target="_blank" rel="noopener" class="wa-float" aria-label="تواصل واتساب">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2zm5.8 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.8-.6-3-1.3-5-4.4-5.2-4.6-.1-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.1.1.3 0 .5l-.4.6c-.1.2-.3.3-.1.6.1.3.7 1.1 1.4 1.8.9.8 1.7 1 2 1.2.2.1.4.1.5-.1l.7-.8c.2-.2.4-.2.6-.1l1.9.9c.2.1.4.2.4.3.1.2.1.6 0 1z"/></svg>
+</a>
+
+<script src="/assets/js/vendor/page-flip.browser.js"></script>
+<script>
+(function () {
+  "use strict";
+  const $  = (s, c=document) => c.querySelector(s);
+  const $$ = (s, c=document) => Array.from(c.querySelectorAll(s));
+
+  /* ---------- Flipbook ---------- */
+  (function initBook() {
+    const el = document.getElementById('flipbook');
+    const fallback = document.getElementById('bookFallback');
+    if (!el || !window.St || !window.St.PageFlip) { fallback.classList.add('show'); return; }
+
+    const PAGES = Array.from({ length: 6 }, (_, i) => `/assets/img/menu-pages/page-${i + 1}.webp`);
+    document.getElementById('bookTotal').textContent = PAGES.length.toLocaleString('ar-EG');
+
+    try {
+      const pageFlip = new St.PageFlip(el, {
+        width: 550,
+        height: 780,
+        size: 'stretch',
+        minWidth: 240,
+        maxWidth: 900,
+        minHeight: 340,
+        maxHeight: 1275,
+        maxShadowOpacity: 0.5,
+        showCover: true,
+        mobileScrollSupport: true,
+        useMouseEvents: true,
+      });
+      pageFlip.loadFromImages(PAGES);
+
+      /* HiDPI canvas fix — the library sizes its internal <canvas> to CSS pixels only and
+         ignores devicePixelRatio, so pages look soft/pixelated on retina phone screens no
+         matter how sharp the source images are. Boost the canvas' pixel buffer to match the
+         device pixel ratio, scale the drawing context to match, and force a repaint — then
+         keep re-applying whenever the library resizes the canvas (rotate / window resize). */
+      const flipCanvas = el.querySelector('canvas.stf__canvas');
+      if (flipCanvas) {
+        const sharpenCanvas = () => {
+          const dpr = window.devicePixelRatio || 1;
+          const cssW = flipCanvas.clientWidth;
+          const cssH = flipCanvas.clientHeight;
+          if (!cssW || !cssH) return;
+          const targetW = Math.round(cssW * dpr);
+          const targetH = Math.round(cssH * dpr);
+          if (flipCanvas.width === targetW && flipCanvas.height === targetH) return;
+          flipCanvas.style.width = cssW + 'px';
+          flipCanvas.style.height = cssH + 'px';
+          flipCanvas.width = targetW;
+          flipCanvas.height = targetH;
+          flipCanvas.getContext('2d').scale(dpr, dpr);
+          pageFlip.update();
+        };
+        sharpenCanvas();
+        pageFlip.on('init', sharpenCanvas);
+        new ResizeObserver(sharpenCanvas).observe(flipCanvas);
+      }
+
+      /* Direct pinch-zoom on the book conflicts with its own swipe-to-flip gesture —
+         while the user is zoomed in, hand touch control fully to the browser (free pan
+         in every direction) by disabling the book's own interactivity, and restore
+         swipe-to-flip automatically once zoom returns to normal. */
+      if (window.visualViewport) {
+        const vv = window.visualViewport;
+        const applyZoomState = () => {
+          el.style.pointerEvents = vv.scale > 1.02 ? 'none' : '';
+        };
+        vv.addEventListener('resize', applyZoomState);
+        vv.addEventListener('scroll', applyZoomState);
+        applyZoomState();
+      }
+
+      const curEl = document.getElementById('bookCur');
+      const prevBtn = document.getElementById('bookPrev');
+      const nextBtn = document.getElementById('bookNext');
+
+      function updateUI() {
+        const cur = pageFlip.getCurrentPageIndex() + 1;
+        curEl.textContent = cur.toLocaleString('ar-EG');
+        prevBtn.disabled = cur <= 1;
+        nextBtn.disabled = cur >= PAGES.length;
+      }
+      pageFlip.on('flip', updateUI);
+      pageFlip.on('init', updateUI);
+
+      nextBtn.addEventListener('click', () => pageFlip.flipNext());
+      prevBtn.addEventListener('click', () => pageFlip.flipPrev());
+
+      /* Zoom lightbox — shows the same full-resolution source image so pinch-zoom stays sharp
+         (the flipbook draws pages on a canvas sized to its on-screen CSS box, which pixelates on zoom). */
+      const zoomBtn = document.getElementById('bookZoom');
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImg = document.getElementById('lightboxImg');
+      const lightboxClose = document.getElementById('lightboxClose');
+
+      function openLightbox() {
+        lightboxImg.src = PAGES[pageFlip.getCurrentPageIndex()];
+        lightbox.classList.add('open');
+      }
+      function closeLightbox() {
+        lightbox.classList.remove('open');
+        lightboxImg.src = '';
+      }
+      zoomBtn.addEventListener('click', openLightbox);
+      lightboxClose.addEventListener('click', closeLightbox);
+      lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+    } catch (err) {
+      fallback.classList.add('show');
+    }
+  })();
+
+  const nav = $('#nav'), progress = $('#scrollProgress');
+  function onScroll() {
+    nav.classList.toggle('scrolled', window.scrollY > 30);
+    const h = document.documentElement.scrollHeight - window.innerHeight;
+    progress.style.transform = `scaleX(${h > 0 ? window.scrollY/h : 0})`;
+  }
+  onScroll(); window.addEventListener('scroll', onScroll, { passive:true });
+
+  $('#navToggle').addEventListener('click', () => nav.classList.toggle('open'));
+  $$('#navLinks a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
+
+  $('#year').textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>

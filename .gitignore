@@ -1,0 +1,42 @@
+# Only files that are on the live site belong in this repo.
+# Raw material (scans, videos, PDFs, drafts) stays on the Mac.
+.DS_Store
+/DESIGN-SPEC.md
+/_deploy/
+/_menu_check.html
+/assets/MAXX MENU.pdf
+/assets/MENU ITEMS/
+/assets/WhatsApp Video 2026-07-17 at 4.59.22 PM.mp4
+/assets/WhatsApp Video 2026-07-17 at 4.59.27 PM (1).mp4
+/assets/WhatsApp Video 2026-07-17 at 4.59.27 PM (2).mp4
+/assets/WhatsApp Video 2026-07-17 at 4.59.27 PM.mp4
+/assets/WhatsApp Video 2026-07-17 at 4.59.28 PM (1).mp4
+/assets/WhatsApp Video 2026-07-17 at 4.59.28 PM.mp4
+/assets/WhatsApp Video 2026-07-17 at 5.16.15 PM.mp4
+/assets/WhatsApp Video 2026-07-17 at 5.16.40 PM.mp4
+/assets/WhatsApp Video 2026-07-17 at 5.18.23 PM (1).mp4
+/assets/WhatsApp Video 2026-07-17 at 5.18.23 PM.mp4
+/assets/WhatsApp Video 2026-07-17 at 5.18.24 PM.mp4
+/assets/WhatsApp Video 2026-07-17 at 5.18.37 PM.mp4
+/assets/WhatsApp Video 2026-07-17 at 5.18.50 PM.mp4
+/assets/WhatsApp Video 2026-07-17 at 5.18.51 PM (1).mp4
+/assets/WhatsApp Video 2026-07-17 at 5.18.51 PM (2).mp4
+/assets/WhatsApp Video 2026-07-17 at 5.18.51 PM.mp4
+/assets/WhatsApp Video 2026-07-17 at 5.18.52 PM.mp4
+/assets/WhatsApp Video 2026-07-17 at 5.18.59 PM.mp4
+/assets/images/
+/assets/img/WhatsApp Imag e 2026-10-15 at 11.11.27.jpeg
+/assets/img/بيج تستي مع بطاطس فريسكاس.jpeg
+/assets/img/بيري بيري.jpeg
+/assets/img/تشيلي تشكن.jpeg
+/assets/img/تندر تشكن.jpeg
+/assets/img/رانش كرانشي.jpeg
+/assets/img/ساندوتش رانش بيري.jpeg
+/assets/img/سبيسي بيكون.jpeg
+/assets/img/ستربس.jpeg
+/assets/img/سيسليا.jpeg
+/assets/img/فرسكاس.jpeg
+/assets/img/مكرونة سيسليا.jpeg
+/assets/img/مكرونه سموكي تشكن.jpeg
+/assets/pizza-maxx-web-14-3-2026.pdf
+/menu-pdf.html
