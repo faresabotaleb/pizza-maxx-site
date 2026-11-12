@@ -14,7 +14,7 @@ jobs:
       - name: Upload changed files over SSH (never deletes anything on the server)
         env:
           SSH_KEY: ${{ secrets.HOSTINGER_SSH_KEY }}
-          TARGET: /home/u225483144/domains/pizza-maxx.com/deploy-test/
+          TARGET: /home/u225483144/domains/pizza-maxx.com/public_html/
         run: |
           mkdir -p ~/.ssh && chmod 700 ~/.ssh
           printf '%s\n' "$SSH_KEY" > ~/.ssh/deploy_key && chmod 600 ~/.ssh/deploy_key
