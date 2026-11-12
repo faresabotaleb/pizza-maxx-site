@@ -18,8 +18,7 @@ jobs:
         run: |
           mkdir -p ~/.ssh && chmod 700 ~/.ssh
           printf '%s\n' "$SSH_KEY" > ~/.ssh/deploy_key && chmod 600 ~/.ssh/deploy_key
-          echo '# 191.96.63.142:65002 SSH-2.0-OpenSSH_8.0
-[191.96.63.142]:65002 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHYG5djaT31bujZyYPwfMrjPJ1VWMWHA6K76s/4egyL3' > ~/.ssh/known_hosts
+          echo '[191.96.63.142]:65002 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHYG5djaT31bujZyYPwfMrjPJ1VWMWHA6K76s/4egyL3' > ~/.ssh/known_hosts
           rsync -rlptvz --checksum \
             --exclude='.git/' --exclude='.github/' --exclude='.gitignore' --exclude='.DS_Store' \
             -e "ssh -p 65002 -i ~/.ssh/deploy_key -o IdentitiesOnly=yes" \
