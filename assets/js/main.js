@@ -104,9 +104,9 @@
     { id:'dr-water-s', name:'مياه معدنية صغيرة', cat:'drinks', img:'placeholder.jpg', spice:0, tags:[], price:10, desc:'مياه معدنية صغيرة.' },
 
     /* ===== عروض التوفير (تنضاف للسلة، مش في الجريد) ===== */
-    { id:'offer-pizza',    name:'عرض ٢ بيتزا كبير من اختيارك',     cat:'offer', img:'offer-pizza.jpg',    spice:0, tags:[], price:500, old:550, desc:'٢ بيتزا كبير من اختيارك (عدا السي فود).' },
-    { id:'offer-pasta',    name:'عرض ٢ مكرونة وسط من اختيارك',     cat:'offer', img:'offer-pasta.jpg',    spice:0, tags:[], price:250, old:270, desc:'٢ مكرونة وسط من اختيارك (عدا السي فود).' },
-    { id:'offer-sandwich', name:'عرض ٢ ساندوتش أو برجر من اختيارك', cat:'offer', img:'offer-sandwich.jpg', spice:0, tags:[], price:220, old:250, desc:'٢ ساندوتش أو برجر من اختيارك.' },
+    { id:'offer-pizza',    name:'عرض ٢ بيتزا كبير من اختيارك',     cat:'offer', img:'offer-pizza.jpg?v=20261118',    spice:0, tags:[], price:500, old:550, desc:'٢ بيتزا كبير من اختيارك (عدا السي فود).' },
+    { id:'offer-pasta',    name:'عرض ٢ مكرونة وسط من اختيارك',     cat:'offer', img:'offer-pasta.jpg?v=20261118',    spice:0, tags:[], price:250, old:270, desc:'٢ مكرونة وسط من اختيارك (عدا السي فود).' },
+    { id:'offer-sandwich', name:'عرض ٢ ساندوتش أو برجر من اختيارك', cat:'offer', img:'offer-sandwich.jpg?v=20261118', spice:0, tags:[], price:220, old:250, desc:'٢ ساندوتش أو برجر من اختيارك.' },
   ];
 
   const BEST_IDS = ['dream','pasta-bigtasty','siracha','chicken-ranch','seafood','sd-wings'];

@@ -114,11 +114,11 @@
     <h1>المنيو الورقي <span class="text-red">الكامل</span></h1>
     <p>شوف كل أصناف بيتزا ماكس بالصور والأسعار في ملف واحد — تقدر تتصفحه هنا أو تحمّله على جهازك.</p>
     <div class="pdf-actions">
-      <a href="/assets/pdf/maxx-menu.pdf" download class="btn btn-primary">
+      <a href="/assets/pdf/maxx-menu.pdf?v=20261118" download class="btn btn-primary">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="M7 10l5 5 5-5"/><path d="M12 15V3"/></svg>
         تحميل المنيو PDF
       </a>
-      <a href="/assets/pdf/maxx-menu.pdf" target="_blank" rel="noopener" class="btn btn-ghost">
+      <a href="/assets/pdf/maxx-menu.pdf?v=20261118" target="_blank" rel="noopener" class="btn btn-ghost">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><path d="M15 3h6v6"/><path d="M10 14L21 3"/></svg>
         فتح في تبويب جديد
       </a>
@@ -224,7 +224,7 @@
     const fallback = document.getElementById('bookFallback');
     if (!el || !window.St || !window.St.PageFlip) { fallback.classList.add('show'); return; }
 
-    const PAGES = Array.from({ length: 6 }, (_, i) => `/assets/img/menu-pages/page-${i + 1}.webp`);
+    const PAGES = Array.from({ length: 6 }, (_, i) => `/assets/img/menu-pages/page-${i + 1}.webp?v=20261118`);
     document.getElementById('bookTotal').textContent = PAGES.length.toLocaleString('ar-EG');
 
     try {
