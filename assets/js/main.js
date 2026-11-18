@@ -14,89 +14,88 @@
   /* ---------- Real menu ---------- */
   const MENU = [
     /* ===== بيتزا (وسط 28سم / كبيرة 32سم) ===== */
-    { id:'dream',        name:'ماكس دريم',            cat:'pizza', img:'m-dream.jpg',       spice:2, tags:['new','best'], sizes:P(190,250), desc:'ستريس بارد + شيدر طبيعي + رومي مدخن + فلفل ألوان + صوص (شيلي + سيراتشا + رانش).' },
-    { id:'chickncheese', name:'تشيكن آند تشيز',        cat:'pizza', img:'m-chickncheese.jpg',    spice:0, tags:[],             sizes:P(190,250), desc:'بدون صلصة طماطم — فراخ مشوية + رومي مدخن + مكس جبن طبيعي (شيدر - موزاريلا).' },
-    { id:'chili-cranchy',name:'تشيلي كرانشي تشيكن',    cat:'pizza', img:'m-chili-cranchy.jpg',      spice:3, tags:[],             sizes:P(190,250), desc:'صلصة طماطم + طماطم + جبنة + قطع ستريس حار + هالابينو + صوص شيدر وتشيلي.' },
-    { id:'chili-chicken',name:'تشيلي تشيكن',           cat:'pizza', img:'placeholder.jpg',  spice:3, tags:[],             sizes:P(190,250), desc:'تشيلي صوص + رانش صوص + دجاج مشوي + بيف بقري مدخن + فلفل ألوان.' },
-    { id:'siracha',      name:'سيراتشا تشيكن',         cat:'pizza', img:'m-siracha.jpg', spice:3, tags:['best'],       sizes:P(190,250), desc:'صلصة طماطم + سيراتشا حار + بيبروني + رومي مدخن + مشروم + فلفل ألوان + صوص السيراتشا الحار.' },
-    { id:'bigtasty',     name:'ماكس بيج تيستي',        cat:'pizza', img:'m-bigtasty.jpg',  spice:0, tags:[],             sizes:P(190,250), desc:'صلصة طماطم + تشيكن تندر + بيبروني + رومي مدخن + فلفل ألوان + بيج تيستي صوص.' },
-    { id:'ranchbbq',     name:'رانش باربيكيو',         cat:'pizza', img:'m-ranchbbq.jpg',      spice:0, tags:[],             sizes:P(190,250), desc:'صلصة باربيكيو + فراخ مشوية + لحمة مفرومة + بيبروني + بيف بيكون + صوص رانش.' },
-    { id:'chicken-ranch',name:'تشيكن رانش',            cat:'pizza', img:'m-chicken-ranch.jpg',      spice:0, tags:['best'],       sizes:P(190,250), desc:'صلصة طماطم + فراخ + فلفل ألوان + جبنة + صوص الرانش.' },
-    { id:'spicy-ranch',  name:'سبايسي تشكن رانش',      cat:'pizza', img:'placeholder.jpg',      spice:2, tags:[],             sizes:P(190,250), desc:'صلصة طماطم + فراخ سترس + فلفل هالابينو + جبنة + صوص رانش.' },
-    { id:'smoky-chicken',name:'سموكي تشيكن',           cat:'pizza', img:'m-smoky-chicken.jpg',    spice:0, tags:[],             sizes:P(190,250), desc:'دجاج مشوي + رومي مدخن + فلفل ألوان + جبنة + سموكي باربيكيو صوص.' },
-    { id:'smoky-meat',   name:'سموكي ميكس لحوم',       cat:'pizza', img:'m-smoky-meat.jpg', spice:0, tags:[],             sizes:P(190,250), desc:'كفتة مشوية + هوت دوج + بيبروني + فلفل ألوان + سموكي باربيكيو صوص.' },
-    { id:'chicken-bacon',name:'تشيكن & بيكون',         cat:'pizza', img:'m-chicken-bacon.jpg',    spice:0, tags:[],             sizes:P(190,250), desc:'صدور دجاج مشوي + بيف بيكون + رومي مدخن + مشروم + فلفل ألوان + باقلو وشيدر صوص.' },
-    { id:'spicy-bacon',  name:'سبايسي تشيكن & بيكون',  cat:'pizza', img:'placeholder.jpg',  spice:2, tags:[],             sizes:P(190,250), desc:'تشيكن ستريس حار + بيف بيكون + رومي مدخن + مشروم + هالابينو + باقلو وشيدر صوص.' },
-    { id:'oriental',     name:'توب أورينتال',          cat:'pizza', img:'m-oriental.jpg',    spice:0, tags:[],             sizes:P(190,250), desc:'دجاج مشوي + رومي مدخن + طماطم + فلفل + زيتون + صلصة تومية.' },
-    { id:'bbq-chicken',  name:'باربيكيو تشيكن',        cat:'pizza', img:'m-bbq-chicken.jpg',    spice:0, tags:[],             sizes:P(190,250), desc:'صلصة باربيكيو + فراخ + طماطم + فلفل + بصل.' },
-    { id:'margherita',   name:'مارجريتا',              cat:'pizza', img:'m-margherita.jpg',    spice:0, tags:[],             sizes:P(130,200), desc:'صلصة طماطم + جبنة موزاريلا.' },
-    { id:'pepperoni',    name:'بيبروني',               cat:'pizza', img:'m-pepperoni.jpg',  spice:1, tags:[],             sizes:P(170,230), desc:'صلصة طماطم + جبنة موزاريلا + بيبروني.' },
-    { id:'tuna',         name:'تونة',                  cat:'pizza', img:'m-tuna.jpg',       spice:0, tags:[],             sizes:P(190,250), desc:'صلصة طماطم + جبنة + تونة قطع + بصل + زيتون + فلفل.' },
-    { id:'seafood',      name:'سكامبي سي فود',         cat:'pizza', img:'m-seafood.jpg',       spice:0, tags:['new'],        sizes:P(215,280), desc:'جمبري + كاليماري + كابوريا + طماطم + فلفل + زيتون + صوص رانش.' },
-    { id:'mixcheese',    name:'ميكس جبن',              cat:'pizza', img:'m-mixcheese.jpg',    spice:0, tags:[],             sizes:P(170,230), desc:'صلصة طماطم + مكس جبن أربع أنواع + فلفل + زيتون.' },
-    { id:'mixmeat',      name:'ميكس لحوم',             cat:'pizza', img:'m-mixmeat.jpg', spice:0, tags:[],             sizes:P(190,250), desc:'صلصة طماطم + كفتة مشوية + لحمة مفرومة + هوت دوج + بيبروني + طماطم + فلفل + زيتون.' },
-    { id:'mixchicken',   name:'ميكس فراخ',             cat:'pizza', img:'m-mixchicken.jpg',    spice:0, tags:[],             sizes:P(190,250), desc:'صلصة طماطم + فراخ + بانية + ستربس + طماطم + فلفل + زيتون.' },
-    { id:'biriberi',     name:'بيري بيري تشيكن',       cat:'pizza', img:'placeholder.jpg',      spice:3, tags:['new'],        sizes:P(190,250), desc:'دجاج مشوي بالكريمة والمشروم والكاري + صوص بيري بيري + باقلو موزاريلا + فلفل ألوان.' },
-    { id:'sicilia',      name:'سيسيليا',               cat:'pizza', img:'placeholder.jpg',  spice:0, tags:['new'],        sizes:P(190,250), desc:'سجق إيطالي + بيبروني + فلفل ألوان + زيتون + باقلو موزاريلا.' },
+    { id:'dream',        name:'ماكس دريم',            cat:'pizza', img:'m-dream.jpg',       spice:2, tags:['new','best'], sizes:P(205,275), desc:'ستريس بارد + شيدر طبيعي + رومي مدخن + فلفل ألوان + صوص (شيلي + سيراتشا + رانش).' },
+    { id:'chickncheese', name:'تشيكن آند تشيز',        cat:'pizza', img:'m-chickncheese.jpg',    spice:0, tags:[],             sizes:P(205,275), desc:'بدون صلصة طماطم — فراخ مشوية + رومي مدخن + مكس جبن طبيعي (شيدر - موزاريلا).' },
+    { id:'chili-cranchy',name:'تشيلي كرانشي تشيكن',    cat:'pizza', img:'m-chili-cranchy.jpg',      spice:3, tags:[],             sizes:P(205,275), desc:'صلصة طماطم + طماطم + جبنة + قطع ستريس حار + هالابينو + صوص شيدر وتشيلي.' },
+    { id:'chili-chicken',name:'تشيلي تشيكن',           cat:'pizza', img:'placeholder.jpg',  spice:3, tags:[],             sizes:P(205,275), desc:'تشيلي صوص + رانش صوص + دجاج مشوي + بيف بقري مدخن + فلفل ألوان.' },
+    { id:'siracha',      name:'سيراتشا تشيكن',         cat:'pizza', img:'m-siracha.jpg', spice:3, tags:['best'],       sizes:P(205,275), desc:'صلصة طماطم + سيراتشا حار + بيبروني + رومي مدخن + مشروم + فلفل ألوان + صوص السيراتشا الحار.' },
+    { id:'bigtasty',     name:'ماكس بيج تيستي',        cat:'pizza', img:'m-bigtasty.jpg',  spice:0, tags:[],             sizes:P(205,275), desc:'صلصة طماطم + تشيكن تندر + بيبروني + رومي مدخن + فلفل ألوان + بيج تيستي صوص.' },
+    { id:'ranchbbq',     name:'رانش باربيكيو',         cat:'pizza', img:'m-ranchbbq.jpg',      spice:0, tags:[],             sizes:P(205,275), desc:'صلصة باربيكيو + فراخ مشوية + لحمة مفرومة + بيبروني + بيف بيكون + صوص رانش.' },
+    { id:'chicken-ranch',name:'تشيكن رانش',            cat:'pizza', img:'m-chicken-ranch.jpg',      spice:0, tags:['best'],       sizes:P(205,275), desc:'صلصة طماطم + فراخ + فلفل ألوان + جبنة + صوص الرانش.' },
+    { id:'spicy-ranch',  name:'سبايسي تشكن رانش',      cat:'pizza', img:'placeholder.jpg',      spice:2, tags:[],             sizes:P(205,275), desc:'صلصة طماطم + فراخ سترس + فلفل هالابينو + جبنة + صوص رانش.' },
+    { id:'smoky-chicken',name:'سموكي تشيكن',           cat:'pizza', img:'m-smoky-chicken.jpg',    spice:0, tags:[],             sizes:P(205,275), desc:'دجاج مشوي + رومي مدخن + فلفل ألوان + جبنة + سموكي باربيكيو صوص.' },
+    { id:'smoky-meat',   name:'سموكي ميكس لحوم',       cat:'pizza', img:'m-smoky-meat.jpg', spice:0, tags:[],             sizes:P(205,275), desc:'كفتة مشوية + هوت دوج + بيبروني + فلفل ألوان + سموكي باربيكيو صوص.' },
+    { id:'chicken-bacon',name:'تشيكن & بيكون',         cat:'pizza', img:'m-chicken-bacon.jpg',    spice:0, tags:[],             sizes:P(205,275), desc:'صدور دجاج مشوي + بيف بيكون + رومي مدخن + مشروم + فلفل ألوان + باقلو وشيدر صوص.' },
+    { id:'spicy-bacon',  name:'سبايسي تشيكن & بيكون',  cat:'pizza', img:'placeholder.jpg',  spice:2, tags:[],             sizes:P(205,275), desc:'تشيكن ستريس حار + بيف بيكون + رومي مدخن + مشروم + هالابينو + باقلو وشيدر صوص.' },
+    { id:'oriental',     name:'توب أورينتال',          cat:'pizza', img:'m-oriental.jpg',    spice:0, tags:[],             sizes:P(205,275), desc:'دجاج مشوي + رومي مدخن + طماطم + فلفل + زيتون + صلصة تومية.' },
+    { id:'bbq-chicken',  name:'باربيكيو تشيكن',        cat:'pizza', img:'m-bbq-chicken.jpg',    spice:0, tags:[],             sizes:P(205,275), desc:'صلصة باربيكيو + فراخ + طماطم + فلفل + بصل.' },
+    { id:'margherita',   name:'مارجريتا',              cat:'pizza', img:'m-margherita.jpg',    spice:0, tags:[],             sizes:P(145,225), desc:'صلصة طماطم + جبنة موزاريلا.' },
+    { id:'pepperoni',    name:'بيبروني',               cat:'pizza', img:'m-pepperoni.jpg',  spice:1, tags:[],             sizes:P(185,255), desc:'صلصة طماطم + جبنة موزاريلا + بيبروني.' },
+    { id:'tuna',         name:'تونة',                  cat:'pizza', img:'m-tuna.jpg',       spice:0, tags:[],             sizes:P(205,275), desc:'صلصة طماطم + جبنة + تونة قطع + بصل + زيتون + فلفل.' },
+    { id:'seafood',      name:'سكامبي سي فود',         cat:'pizza', img:'m-seafood.jpg',       spice:0, tags:['new'],        sizes:P(230,305), desc:'جمبري + كاليماري + كابوريا + طماطم + فلفل + زيتون + صوص رانش.' },
+    { id:'mixcheese',    name:'ميكس جبن',              cat:'pizza', img:'m-mixcheese.jpg',    spice:0, tags:[],             sizes:P(185,255), desc:'صلصة طماطم + مكس جبن أربع أنواع + فلفل + زيتون.' },
+    { id:'mixmeat',      name:'ميكس لحوم',             cat:'pizza', img:'m-mixmeat.jpg', spice:0, tags:[],             sizes:P(205,275), desc:'صلصة طماطم + كفتة مشوية + لحمة مفرومة + هوت دوج + بيبروني + طماطم + فلفل + زيتون.' },
+    { id:'mixchicken',   name:'ميكس فراخ',             cat:'pizza', img:'m-mixchicken.jpg',    spice:0, tags:[],             sizes:P(205,275), desc:'صلصة طماطم + فراخ + بانية + ستربس + طماطم + فلفل + زيتون.' },
+    { id:'biriberi',     name:'بيري بيري تشيكن',       cat:'pizza', img:'placeholder.jpg',      spice:3, tags:['new'],        sizes:P(205,275), desc:'دجاج مشوي بالكريمة والمشروم والكاري + صوص بيري بيري + باقلو موزاريلا + فلفل ألوان.' },
+    { id:'sicilia',      name:'سيسيليا',               cat:'pizza', img:'placeholder.jpg',  spice:0, tags:['new'],        sizes:P(205,275), desc:'سجق إيطالي + بيبروني + فلفل ألوان + زيتون + باقلو موزاريلا.' },
 
     /* ===== مكرونة (وسط / كبير) ===== */
-    { id:'pasta-dream',        name:'مكرونة ماكس دريم',        cat:'pasta', img:'m-pasta-dream.jpg',   spice:2, tags:['new','best'], sizes:PP(125,160), desc:'مكرونة فرن + شيدر طبيعي + صلصة بيضاء + ستريس بارد + رومي مدخن + فلفل ألوان + صوص (شيلي + سيراتشا + رانش).' },
-    { id:'pasta-chickncheese', name:'مكرونة تشيكن آند تشيز',   cat:'pasta', img:'placeholder.jpg',  spice:0, tags:[],             sizes:PP(125,160), desc:'فراخ مشوية + رومي مدخن + مكس جبن طبيعي (شيدر - موزاريلا).' },
-    { id:'pasta-topgrill',     name:'مكرونة توب جريل',         cat:'pasta', img:'m-pasta-topgrill.jpg',  spice:0, tags:['best'],       sizes:PP(125,160), desc:'مكرونة بصلصة نابولي مع جبنة ودجاج مشوي (أوراك) بتتبيلة شرقية.' },
-    { id:'pasta-chili-cranchy',name:'مكرونة تشيلي كرانشي',     cat:'pasta', img:'m-pasta-chili-cranchy.jpg',   spice:3, tags:[],             sizes:PP(125,160), desc:'صلصة بيضاء وطماطم + قطع ستريس حار + هالابينو + صوص تشيلي وشيدر في الفرن.' },
-    { id:'pasta-chili',        name:'مكرونة تشيلي تشيكن',      cat:'pasta', img:'m-pasta-chili.jpg',   spice:3, tags:[],             sizes:PP(125,160), desc:'صلصة بيضاء + دجاج مشوي + بيف مدخن + صوص شيلي ورانش + فلفل ألوان + جبنة.' },
-    { id:'pasta-siracha',      name:'مكرونة سيراتشا تشيكن',    cat:'pasta', img:'m-pasta-siracha.jpg',   spice:3, tags:['best'],       sizes:PP(125,160), desc:'صلصة بيضاء + ستريس حار + بيبروني + رومي مدخن + مشروم + فلفل ألوان + جبنة + صوص سيراتشا حار.' },
-    { id:'pasta-bigtasty',     name:'مكرونة ماكس بيج تيستي',   cat:'pasta', img:'m-pasta-bigtasty.jpg',  spice:0, tags:[],             sizes:PP(125,160), desc:'صلصة بيضاء + نابولي + تندر تشيكن + بيبروني + رومي مدخن + بيج تيستي صوص.' },
-    { id:'pasta-smoky',        name:'مكرونة سموكي تشيكن',      cat:'pasta', img:'placeholder.jpg',  spice:0, tags:[],             sizes:PP(125,160), desc:'صلصة بيضاء + دجاج مشوي + رومي مدخن + فلفل ألوان + صوص سموكي باربيكيو + جبنة في الفرن.' },
-    { id:'pasta-smokymeat',    name:'مكرونة سموكي ميكس لحوم',  cat:'pasta', img:'m-pasta-smokymeat.jpg',  spice:0, tags:[],             sizes:PP(125,160), desc:'صلصة بيضاء + كفتة مشوية + هوت دوج + بيبروني + فلفل ألوان + سموكي باربيكيو + جبنة في الفرن.' },
-    { id:'pasta-chicken-bacon',name:'مكرونة تشيكن & بيكون',    cat:'pasta', img:'m-pasta-chicken-bacon.jpg',  spice:0, tags:[],             sizes:PP(125,160), desc:'صلصة بيضاء + صدور مشوي + بيف بيكون + مشروم + فلفل + باقلو وشيدر صوص مع الجبنة في الفرن.' },
-    { id:'pasta-spicy-bacon',  name:'مكرونة سبايسي & بيكون',   cat:'pasta', img:'placeholder.jpg',   spice:2, tags:[],             sizes:PP(125,160), desc:'صلصة بيضاء + ستريس حار + بيف بيكون + مشروم + هالابينو + باقلو وشيدر صوص في الفرن.' },
-    { id:'pasta-diavolo',      name:'مكرونة ديافلو',          cat:'pasta', img:'m-pasta-diavolo.jpg',   spice:3, tags:[],             sizes:PP(125,160), desc:'صلصة بيضاء + ستريس حار + رومي مدخن + هالابينو + باقلو صوص مع الجبنة في الفرن.' },
-    { id:'pasta-oriental',     name:'مكرونة توب أورينتال',     cat:'pasta', img:'m-pasta-oriental.jpg',  spice:0, tags:[],             sizes:PP(125,160), desc:'صلصة حمراء + دجاج مشوي + رومي مدخن + طماطم + فلفل + زيتون + تومية في الفرن.' },
-    { id:'pasta-mixmeat',      name:'مكرونة ميكس لحوم',        cat:'pasta', img:'m-pasta-mixmeat.jpg',  spice:0, tags:[],             sizes:PP(120,150), desc:'بدون خضار — صلصة بيضاء + لحمة مفرومة + كفتة مشوية + هوت دوج + بيبروني في الفرن.' },
-    { id:'pasta-mixchicken',   name:'مكرونة ميكس فراخ',        cat:'pasta', img:'placeholder.jpg',  spice:0, tags:[],             sizes:PP(120,150), desc:'بدون خضار — صلصة بيضاء + صدور دجاج + بانيه + ستريس حار + رومي مدخن في الفرن.' },
-    { id:'pasta-negresco',     name:'مكرونة نجرسكو',          cat:'pasta', img:'placeholder.jpg',  spice:0, tags:[],             sizes:PP(120,150), desc:'صلصة بيضاء + دجاج + خضروات مشكلة مع الجبنة في الفرن.' },
-    { id:'pasta-bechamel',     name:'مكرونة بشاميل',          cat:'pasta', img:'placeholder.jpg',  spice:0, tags:[],             sizes:PP(120,150), desc:'صلصة بيضاء + لحمة مفرومة مع الجبنة في الفرن.' },
-    { id:'pasta-seafood',      name:'مكرونة ماكس سكامبي سي فود',cat:'pasta',img:'placeholder.jpg',   spice:0, tags:['new'],        sizes:PP(160,190), desc:'صلصة بيضاء (جمبري + كاليماري + كابوريا) + ثوم + خضار مع الجبنة في الفرن.' },
-    { id:'pasta-biriberi', name:'مكرونة بيري بيري تشيكن', cat:'pasta', img:'m-pasta-biriberi.jpg',  spice:3, tags:['new'],        sizes:PP(125,160), desc:'مكرونة فرن + صلصة بيضاء + دجاج مشوي بالكريمة والمشروم والكاري + صوص بيري بيري + باقلو موزاريلا.' },
-    { id:'pasta-sicilia',  name:'مكرونة سيسيليا',        cat:'pasta', img:'placeholder.jpg',  spice:0, tags:['new'],        sizes:PP(125,160), desc:'مكرونة فرن + صلصة بيضاء + سجق إيطالي + بيبروني + فلفل شيلي + زيتون + باقلو موزاريلا.' },
+    { id:'pasta-dream',        name:'مكرونة ماكس دريم',        cat:'pasta', img:'m-pasta-dream.jpg',   spice:2, tags:['new','best'], sizes:PP(135,175), desc:'مكرونة فرن + شيدر طبيعي + صلصة بيضاء + ستريس بارد + رومي مدخن + فلفل ألوان + صوص (شيلي + سيراتشا + رانش).' },
+    { id:'pasta-chickncheese', name:'مكرونة تشيكن آند تشيز',   cat:'pasta', img:'placeholder.jpg',  spice:0, tags:[],             sizes:PP(135,175), desc:'فراخ مشوية + رومي مدخن + مكس جبن طبيعي (شيدر - موزاريلا).' },
+    { id:'pasta-topgrill',     name:'مكرونة توب جريل',         cat:'pasta', img:'m-pasta-topgrill.jpg',  spice:0, tags:['best'],       sizes:PP(135,175), desc:'مكرونة بصلصة نابولي مع جبنة ودجاج مشوي (أوراك) بتتبيلة شرقية.' },
+    { id:'pasta-chili-cranchy',name:'مكرونة تشيلي كرانشي',     cat:'pasta', img:'m-pasta-chili-cranchy.jpg',   spice:3, tags:[],             sizes:PP(135,175), desc:'صلصة بيضاء وطماطم + قطع ستريس حار + هالابينو + صوص تشيلي وشيدر في الفرن.' },
+    { id:'pasta-chili',        name:'مكرونة تشيلي تشيكن',      cat:'pasta', img:'m-pasta-chili.jpg',   spice:3, tags:[],             sizes:PP(135,175), desc:'صلصة بيضاء + دجاج مشوي + بيف مدخن + صوص شيلي ورانش + فلفل ألوان + جبنة.' },
+    { id:'pasta-siracha',      name:'مكرونة سيراتشا تشيكن',    cat:'pasta', img:'m-pasta-siracha.jpg',   spice:3, tags:['best'],       sizes:PP(135,175), desc:'صلصة بيضاء + ستريس حار + بيبروني + رومي مدخن + مشروم + فلفل ألوان + جبنة + صوص سيراتشا حار.' },
+    { id:'pasta-bigtasty',     name:'مكرونة ماكس بيج تيستي',   cat:'pasta', img:'m-pasta-bigtasty.jpg',  spice:0, tags:[],             sizes:PP(135,175), desc:'صلصة بيضاء + نابولي + تندر تشيكن + بيبروني + رومي مدخن + بيج تيستي صوص.' },
+    { id:'pasta-smoky',        name:'مكرونة سموكي تشيكن',      cat:'pasta', img:'placeholder.jpg',  spice:0, tags:[],             sizes:PP(135,175), desc:'صلصة بيضاء + دجاج مشوي + رومي مدخن + فلفل ألوان + صوص سموكي باربيكيو + جبنة في الفرن.' },
+    { id:'pasta-smokymeat',    name:'مكرونة سموكي ميكس لحوم',  cat:'pasta', img:'m-pasta-smokymeat.jpg',  spice:0, tags:[],             sizes:PP(135,175), desc:'صلصة بيضاء + كفتة مشوية + هوت دوج + بيبروني + فلفل ألوان + سموكي باربيكيو + جبنة في الفرن.' },
+    { id:'pasta-chicken-bacon',name:'مكرونة تشيكن & بيكون',    cat:'pasta', img:'m-pasta-chicken-bacon.jpg',  spice:0, tags:[],             sizes:PP(135,175), desc:'صلصة بيضاء + صدور مشوي + بيف بيكون + مشروم + فلفل + باقلو وشيدر صوص مع الجبنة في الفرن.' },
+    { id:'pasta-spicy-bacon',  name:'مكرونة سبايسي & بيكون',   cat:'pasta', img:'placeholder.jpg',   spice:2, tags:[],             sizes:PP(135,175), desc:'صلصة بيضاء + ستريس حار + بيف بيكون + مشروم + هالابينو + باقلو وشيدر صوص في الفرن.' },
+    { id:'pasta-diavolo',      name:'مكرونة ديافلو',          cat:'pasta', img:'m-pasta-diavolo.jpg',   spice:3, tags:[],             sizes:PP(135,175), desc:'صلصة بيضاء + ستريس حار + رومي مدخن + هالابينو + باقلو صوص مع الجبنة في الفرن.' },
+    { id:'pasta-oriental',     name:'مكرونة توب أورينتال',     cat:'pasta', img:'m-pasta-oriental.jpg',  spice:0, tags:[],             sizes:PP(135,175), desc:'صلصة حمراء + دجاج مشوي + رومي مدخن + طماطم + فلفل + زيتون + تومية في الفرن.' },
+    { id:'pasta-mixmeat',      name:'مكرونة ميكس لحوم',        cat:'pasta', img:'m-pasta-mixmeat.jpg',  spice:0, tags:[],             sizes:PP(130,165), desc:'بدون خضار — صلصة بيضاء + لحمة مفرومة + كفتة مشوية + هوت دوج + بيبروني في الفرن.' },
+    { id:'pasta-mixchicken',   name:'مكرونة ميكس فراخ',        cat:'pasta', img:'placeholder.jpg',  spice:0, tags:[],             sizes:PP(130,165), desc:'بدون خضار — صلصة بيضاء + صدور دجاج + بانيه + ستريس حار + رومي مدخن في الفرن.' },
+    { id:'pasta-negresco',     name:'مكرونة نجرسكو',          cat:'pasta', img:'placeholder.jpg',  spice:0, tags:[],             sizes:PP(130,165), desc:'صلصة بيضاء + دجاج + خضروات مشكلة مع الجبنة في الفرن.' },
+    { id:'pasta-bechamel',     name:'مكرونة بشاميل',          cat:'pasta', img:'placeholder.jpg',  spice:0, tags:[],             sizes:PP(130,165), desc:'صلصة بيضاء + لحمة مفرومة مع الجبنة في الفرن.' },
+    { id:'pasta-seafood',      name:'مكرونة ماكس سكامبي سي فود',cat:'pasta',img:'placeholder.jpg',   spice:0, tags:['new'],        sizes:PP(170,205), desc:'صلصة بيضاء (جمبري + كاليماري + كابوريا) + ثوم + خضار مع الجبنة في الفرن.' },
+    { id:'pasta-biriberi', name:'مكرونة بيري بيري تشيكن', cat:'pasta', img:'m-pasta-biriberi.jpg',  spice:3, tags:['new'],        sizes:PP(135,175), desc:'مكرونة فرن + صلصة بيضاء + دجاج مشوي بالكريمة والمشروم والكاري + صوص بيري بيري + باقلو موزاريلا.' },
+    { id:'pasta-sicilia',  name:'مكرونة سيسيليا',        cat:'pasta', img:'placeholder.jpg',  spice:0, tags:['new'],        sizes:PP(135,175), desc:'مكرونة فرن + صلصة بيضاء + سجق إيطالي + بيبروني + فلفل شيلي + زيتون + باقلو موزاريلا.' },
 
     /* ===== ساندوتش (سعر ثابت) ===== */
-    { id:'sw-shish',      name:'شيش وراك مشوي',           cat:'sandwich', img:'m-sw-shish.jpg', spice:0, tags:[],       price:115, desc:'شيش وراك مشوي مع تومية.' },
-    { id:'sw-tender',     name:'تندر فيليه دجاج كرانشي',  cat:'sandwich', img:'placeholder.jpg', spice:0, tags:['best'], price:115, desc:'تندر فيليه دجاج كرانشي مع تومية ورانش.' },
-    { id:'sw-super',      name:'سوبر كرانشي',             cat:'sandwich', img:'m-sw-super.jpg', spice:2, tags:[],       price:115, desc:'سوبر كرانشي مع صوص سيراتشا.' },
-    { id:'sw-cordon',     name:'كوردن بلو',               cat:'sandwich', img:'placeholder.jpg', spice:0, tags:[],       price:115, desc:'كوردن بلو مع صوص شيدر.' },
-    { id:'sw-grilled',    name:'صدور دجاج مشوي',          cat:'sandwich', img:'m-sw-grilled.jpg', spice:0, tags:[],       price:115, desc:'صدور دجاج مشوي مع تومية.' },
-    { id:'sw-grilled-hot',name:'صدور دجاج مشوي حار',      cat:'sandwich', img:'placeholder.jpg', spice:2, tags:[],       price:115, desc:'صدور دجاج مشوي حار (مشروم + هالابينو) مع تومية.' },
-    { id:'sw-biriberi',    name:'بيري بيري تشيكن',       cat:'sandwich', img:'m-sw-biriberi.jpg', spice:3, tags:['new'], price:120, desc:'دجاج مشوي بالكريمة + باقلو موزاريلا + صوص بيري بيري.' },
-    { id:'sw-ranch-cranchy-s',name:'رانش بيري تشكن',  cat:'sandwich', img:'placeholder.jpg', spice:3, tags:['new'], price:120, desc:'تندر تشيكن + باقلو موزاريلا + صوص رانش.' },
+    { id:'sw-tender',     name:'تندر فيليه دجاج كرانشي',  cat:'sandwich', img:'placeholder.jpg', spice:0, tags:['best'], price:125, desc:'تندر فيليه دجاج كرانشي مع تومية ورانش.' },
+    { id:'sw-super',      name:'سوبر كرانشي',             cat:'sandwich', img:'m-sw-super.jpg', spice:2, tags:[],       price:125, desc:'سوبر كرانشي مع صوص سيراتشا.' },
+    { id:'sw-cordon',     name:'كوردن بلو',               cat:'sandwich', img:'placeholder.jpg', spice:0, tags:[],       price:125, desc:'كوردن بلو مع صوص شيدر.' },
+    { id:'sw-grilled',    name:'صدور دجاج مشوي',          cat:'sandwich', img:'m-sw-grilled.jpg', spice:0, tags:[],       price:125, desc:'صدور دجاج مشوي مع تومية.' },
+    { id:'sw-grilled-hot',name:'صدور دجاج مشوي حار',      cat:'sandwich', img:'placeholder.jpg', spice:2, tags:[],       price:125, desc:'صدور دجاج مشوي حار (مشروم + هالابينو) مع تومية.' },
+    { id:'sw-biriberi',    name:'بيري بيري تشيكن',       cat:'sandwich', img:'m-sw-biriberi.jpg', spice:3, tags:['new'], price:125, desc:'دجاج مشوي بالكريمة + باقلو موزاريلا + صوص بيري بيري.' },
+    { id:'sw-ranch-cranchy-s',name:'رانش بيري تشكن',  cat:'sandwich', img:'placeholder.jpg', spice:3, tags:['new'], price:125, desc:'تندر تشيكن + باقلو موزاريلا + صوص رانش.' },
 
     /* ===== برجر (سعر ثابت) ===== */
-    { id:'bg-bigtasty',        name:'بيج تيستي برجر',           cat:'burger', img:'placeholder.jpg', spice:0, tags:[], price:115, desc:'بيج تيستي برجر — ١٥٠ جرام.' },
-    { id:'bg-ranch-cranchy',   name:'رانش كرانشي تشيكن برجر',   cat:'burger', img:'placeholder.jpg', spice:2, tags:[], price:115, desc:'رانش كرانشي تشيكن برجر.' },
-    { id:'bg-bigtasty-chicken',name:'بيج تيستي تشيكن برجر',     cat:'burger', img:'placeholder.jpg', spice:0, tags:[], price:115, desc:'بيج تيستي تشيكن برجر.' },
-    { id:'bg-bacon',           name:'بيكون تشيز برجر',          cat:'burger', img:'placeholder.jpg', spice:0, tags:[], price:115, desc:'بيكون تشيز برجر — ١٥٠ جرام.' },
-    { id:'bg-cheese',          name:'تشيز برجر',                cat:'burger', img:'placeholder.jpg', spice:0, tags:[], price:110, desc:'تشيز برجر — ١٥٠ جرام.' },
+    { id:'bg-bigtasty',        name:'بيج تيستي برجر',           cat:'burger', img:'placeholder.jpg', spice:0, tags:[], price:125, desc:'بيج تيستي برجر — ١٥٠ جرام.' },
+    { id:'bg-ranch-cranchy',   name:'رانش كرانشي تشيكن برجر',   cat:'burger', img:'placeholder.jpg', spice:2, tags:[], price:125, desc:'رانش كرانشي تشيكن برجر.' },
+    { id:'bg-bigtasty-chicken',name:'بيج تيستي تشيكن برجر',     cat:'burger', img:'placeholder.jpg', spice:0, tags:[], price:125, desc:'بيج تيستي تشيكن برجر.' },
+    { id:'bg-bacon',           name:'بيكون تشيز برجر',          cat:'burger', img:'placeholder.jpg', spice:0, tags:[], price:125, desc:'بيكون تشيز برجر — ١٥٠ جرام.' },
+    { id:'bg-cheese',          name:'تشيز برجر',                cat:'burger', img:'placeholder.jpg', spice:0, tags:[], price:120, desc:'تشيز برجر — ١٥٠ جرام.' },
 
-    /* ===== وجبات المكرونة VIP (سعر ثابت 195) ===== */
-    { id:'meal-topgrill',     name:'وجبة توب جريل',          cat:'meal', img:'m-meal-topgrill.jpg', spice:0, tags:['new'], price:200, desc:'مكرونة توب جريل + دجاج مشوي وراك خلطة شرقية + ٢ قطعة سمبوسة بالفراخ والجبنة + بطاطس فرسكاس.' },
-    { id:'meal-bigtasty',     name:'وجبة ماكس بيج تيستي',    cat:'meal', img:'placeholder.jpg', spice:0, tags:['new'], price:200, desc:'مكرونة بيج تيستي + تشيكن تندر + ٢ قطعة سمبوسة بالفراخ والجبنة + بطاطس فرسكاس.' },
-    { id:'meal-chicken-bacon',name:'وجبة تشيكن & بيكون',     cat:'meal', img:'m-meal-chicken-bacon.jpg', spice:0, tags:['new'], price:200, desc:'مكرونة تشيكن & بيكون + صدور مشوي + ٢ قطعة سمبوسة بالفراخ والجبنة + بطاطس فرسكاس.' },
-    { id:'meal-diavolo',      name:'وجبة ديافلو',            cat:'meal', img:'m-meal-diavolo.jpg', spice:3, tags:['new'], price:200, desc:'مكرونة ديافلو + ٣ قطع ستريس + ٢ قطعة سمبوسة بالفراخ والجبنة + بطاطس فرسكاس.' },
-    { id:'meal-smoky',        name:'وجبة سموكي تشيكن',       cat:'meal', img:'m-meal-smoky.jpg', spice:0, tags:['new'], price:200, desc:'مكرونة سموكي تشيكن + قطعتين كوردن بلو + ٢ قطعة سمبوسة بالفراخ والجبنة + بطاطس فرسكاس.' },
+    /* ===== وجبات المكرونة VIP (سعر ثابت 220) ===== */
+    { id:'meal-topgrill',     name:'وجبة توب جريل',          cat:'meal', img:'m-meal-topgrill.jpg', spice:0, tags:['new'], price:220, desc:'مكرونة توب جريل + دجاج مشوي وراك خلطة شرقية + ٢ قطعة سمبوسة بالفراخ والجبنة + بطاطس فرسكاس.' },
+    { id:'meal-bigtasty',     name:'وجبة ماكس بيج تيستي',    cat:'meal', img:'placeholder.jpg', spice:0, tags:['new'], price:220, desc:'مكرونة بيج تيستي + تشيكن تندر + ٢ قطعة سمبوسة بالفراخ والجبنة + بطاطس فرسكاس.' },
+    { id:'meal-chicken-bacon',name:'وجبة تشيكن & بيكون',     cat:'meal', img:'m-meal-chicken-bacon.jpg', spice:0, tags:['new'], price:220, desc:'مكرونة تشيكن & بيكون + صدور مشوي + ٢ قطعة سمبوسة بالفراخ والجبنة + بطاطس فرسكاس.' },
+    { id:'meal-diavolo',      name:'وجبة ديافلو',            cat:'meal', img:'m-meal-diavolo.jpg', spice:3, tags:['new'], price:220, desc:'مكرونة ديافلو + ٣ قطع ستريس + ٢ قطعة سمبوسة بالفراخ والجبنة + بطاطس فرسكاس.' },
+    { id:'meal-smoky',        name:'وجبة سموكي تشيكن',       cat:'meal', img:'m-meal-smoky.jpg', spice:0, tags:['new'], price:220, desc:'مكرونة سموكي تشيكن + قطعتين كوردن بلو + ٢ قطعة سمبوسة بالفراخ والجبنة + بطاطس فرسكاس.' },
 
     /* ===== أطباق جانبية (سعر ثابت) ===== */
-    { id:'sd-caesar',    name:'سلطة تشيكن سيزر',      cat:'sides', img:'placeholder.jpg',     spice:0, tags:['new'], price:85,  desc:'خس + طماطم + بصل + فلفل + ذرة + ريموﻻد صوص + بطاطس + مكعبات فراخ مشوية + توست محمص.' },
-    { id:'sd-sambosa',   name:'سمبوسة بالفراخ والجبنة',cat:'sides', img:'m-sambosa.jpg',  spice:0, tags:[],       price:85,  desc:'٦ قطع سمبوسة محشية فراخ وجبنة، مقرمشة على الآخر.' },
-    { id:'sd-strips',    name:'ستربس + بطاطس فرسكاس',  cat:'sides', img:'placeholder.jpg',     spice:0, tags:[],       price:115, desc:'٣ قطع ستربس + بطاطس فرسكاس — ١٨٠ جم.' },
-    { id:'sd-tender',    name:'تندر تشيكن + بطاطس',    cat:'sides', img:'placeholder.jpg',     spice:0, tags:[],       price:110, desc:'تندر تشيكن + بطاطس فرسكاس — ١٨٠ جم.' },
-    { id:'sd-wings',     name:'ماكس تشيكن وينجز',      cat:'sides', img:'m-wings.jpg', spice:2, tags:['new'],  price:100, desc:'٨ قطع أجنحة دجاج بصوص (رانش + باقلو + سيراتشا).' },
-    { id:'sd-chili-fries',name:'تشيلي كرانشي فرايز',   cat:'sides', img:'m-chili-fries.jpg',     spice:3, tags:[],       price:100, desc:'بطاطس كرينكل + قطع ستريس حار ١٢٠جم + هالابينو + صوص شيلي وشيدر.' },
-    { id:'sd-max-fries', name:'ماكس فرايز',            cat:'sides', img:'placeholder.jpg',     spice:0, tags:[],       price:85,  desc:'بطاطس كرينكل + بيف بيكون + رومي مدخن + مشروم + صوص شيدر.' },
-    { id:'sd-ranch-fries',name:'رانش فرايز',           cat:'sides', img:'placeholder.jpg',     spice:0, tags:[],       price:85,  desc:'بطاطس كرينكل + مدخنات (بيكون + بيبروني + رومي + بيف) + صوص رانش.' },
-    { id:'sd-freskas',   name:'بطاطس فرسكاس',          cat:'sides', img:'placeholder.jpg',     spice:0, tags:[],       price:50,  desc:'بطاطس فرسكاس مقرمشة.' },
-    { id:'sd-fries',     name:'بطاطس فرنش فرايز',      cat:'sides', img:'m-fries.jpg',     spice:0, tags:[],       price:40,  desc:'بطاطس فرنش فرايز.' },
-    { id:'sd-coleslaw',  name:'سلطة كول سلو',          cat:'sides', img:'placeholder.jpg',     spice:0, tags:[],       price:40,  desc:'سلطة كول سلو كريمية منعشة.' },
+    { id:'sd-caesar',    name:'سلطة تشيكن سيزر',      cat:'sides', img:'placeholder.jpg',     spice:0, tags:['new'], price:90,  desc:'خس + طماطم + بصل + فلفل + ذرة + ريموﻻد صوص + بطاطس + مكعبات فراخ مشوية + توست محمص.' },
+    { id:'sd-sambosa',   name:'سمبوسة بالفراخ والجبنة',cat:'sides', img:'m-sambosa.jpg',  spice:0, tags:[],       price:90,  desc:'٦ قطع سمبوسة محشية فراخ وجبنة، مقرمشة على الآخر.' },
+    { id:'sd-strips',    name:'ستربس + بطاطس فرسكاس',  cat:'sides', img:'placeholder.jpg',     spice:0, tags:[],       price:125, desc:'٣ قطع ستربس + بطاطس فرسكاس — ١٨٠ جم.' },
+    { id:'sd-tender',    name:'تندر تشيكن + بطاطس',    cat:'sides', img:'placeholder.jpg',     spice:0, tags:[],       price:120, desc:'تندر تشيكن + بطاطس فرسكاس — ١٨٠ جم.' },
+    { id:'sd-wings',     name:'ماكس تشيكن وينجز',      cat:'sides', img:'m-wings.jpg', spice:2, tags:['new'],  price:110, desc:'٨ قطع أجنحة دجاج بصوص (رانش + باقلو + سيراتشا).' },
+    { id:'sd-chili-fries',name:'تشيلي كرانشي فرايز',   cat:'sides', img:'m-chili-fries.jpg',     spice:3, tags:[],       price:110, desc:'بطاطس كرينكل + قطع ستريس حار ١٢٠جم + هالابينو + صوص شيلي وشيدر.' },
+    { id:'sd-max-fries', name:'ماكس فرايز',            cat:'sides', img:'placeholder.jpg',     spice:0, tags:[],       price:90,  desc:'بطاطس كرينكل + بيف بيكون + رومي مدخن + مشروم + صوص شيدر.' },
+    { id:'sd-ranch-fries',name:'رانش فرايز',           cat:'sides', img:'placeholder.jpg',     spice:0, tags:[],       price:90,  desc:'بطاطس كرينكل + مدخنات (بيكون + بيبروني + رومي + بيف) + صوص رانش.' },
+    { id:'sd-freskas',   name:'بطاطس فرسكاس',          cat:'sides', img:'placeholder.jpg',     spice:0, tags:[],       price:55,  desc:'بطاطس فرسكاس مقرمشة.' },
+    { id:'sd-fries',     name:'بطاطس فرنش فرايز',      cat:'sides', img:'m-fries.jpg',     spice:0, tags:[],       price:45,  desc:'بطاطس فرنش فرايز.' },
+    { id:'sd-coleslaw',  name:'سلطة كول سلو',          cat:'sides', img:'placeholder.jpg',     spice:0, tags:[],       price:45,  desc:'سلطة كول سلو كريمية منعشة.' },
 
     /* ===== مشروبات ===== */
     { id:'dr-cola-lt', name:'مياه غازية ١ لتر', cat:'drinks', img:'m-drink-cola.jpg', spice:0, tags:[], price:35, desc:'مشروب غازي ١ لتر.' },
@@ -105,18 +104,18 @@
     { id:'dr-water-s', name:'مياه معدنية صغيرة', cat:'drinks', img:'placeholder.jpg', spice:0, tags:[], price:10, desc:'مياه معدنية صغيرة.' },
 
     /* ===== عروض التوفير (تنضاف للسلة، مش في الجريد) ===== */
-    { id:'offer-pizza',    name:'عرض ٢ بيتزا وسط من اختيارك',      cat:'offer', img:'offer-pizza.jpg',    spice:0, tags:[], price:330, old:380, desc:'٢ بيتزا وسط من اختيارك (عدا السي فود).' },
-    { id:'offer-pasta',    name:'عرض ٣ مكرونة وسط من اختيارك',     cat:'offer', img:'offer-pasta.jpg',    spice:0, tags:[], price:330, old:375, desc:'٣ مكرونة وسط من اختيارك (عدا السي فود).' },
-    { id:'offer-sandwich', name:'عرض ٣ ساندوتش أو برجر من اختيارك', cat:'offer', img:'offer-sandwich.jpg', spice:0, tags:[], price:300, old:345, desc:'٣ ساندوتش أو برجر من اختيارك.' },
+    { id:'offer-pizza',    name:'عرض ٢ بيتزا كبير من اختيارك',     cat:'offer', img:'offer-pizza.jpg',    spice:0, tags:[], price:500, old:550, desc:'٢ بيتزا كبير من اختيارك (عدا السي فود).' },
+    { id:'offer-pasta',    name:'عرض ٢ مكرونة وسط من اختيارك',     cat:'offer', img:'offer-pasta.jpg',    spice:0, tags:[], price:250, old:270, desc:'٢ مكرونة وسط من اختيارك (عدا السي فود).' },
+    { id:'offer-sandwich', name:'عرض ٢ ساندوتش أو برجر من اختيارك', cat:'offer', img:'offer-sandwich.jpg', spice:0, tags:[], price:220, old:250, desc:'٢ ساندوتش أو برجر من اختيارك.' },
   ];
 
   const BEST_IDS = ['dream','pasta-bigtasty','siracha','chicken-ranch','seafood','sd-wings'];
 
   /* عروض التوفير: كام صنف لازم يختار، ومن انهي فئات، وأي أصناف مستثناة (سي فود) */
   const OFFER_CONFIG = {
-    'offer-pizza':    { count: 2, sources: ['pizza'],              excludeIds: ['seafood'] },
-    'offer-pasta':    { count: 3, sources: ['pasta'],              excludeIds: ['pasta-seafood'] },
-    'offer-sandwich': { count: 3, sources: ['sandwich','burger'],  excludeIds: [] },
+    'offer-pizza':    { count: 2, size: 1, sources: ['pizza'],              excludeIds: ['seafood'] },
+    'offer-pasta':    { count: 2, size: 0, sources: ['pasta'],              excludeIds: ['pasta-seafood'] },
+    'offer-sandwich': { count: 2, sources: ['sandwich','burger'],  excludeIds: [] },
   };
 
   const REVIEWS = [
@@ -128,7 +127,7 @@
     { name:'نورهان علي', city:'طلخا', color:'#FFC42E', text:'بجد طعم الفرحة بيتكلم! البيبروني حارّة بالظبط زي ما بحب. ماكس بقى مطعمي المفضّل.' },
   ];
 
-  const GALLERY = ['m-chicken-ranch.jpg','m-wings.jpg','m-pepperoni.jpg','m-pasta-siracha.jpg','m-meal-topgrill.jpg','m-chili-fries.jpg','m-mixmeat.jpg','m-siracha.jpg','m-pasta-diavolo.jpg','m-meal-smoky.jpg','m-oriental.jpg','m-sw-shish.jpg'];
+  const GALLERY = ['m-chicken-ranch.jpg','m-wings.jpg','m-pepperoni.jpg','m-pasta-siracha.jpg','m-meal-topgrill.jpg','m-chili-fries.jpg','m-mixmeat.jpg','m-siracha.jpg','m-pasta-diavolo.jpg','m-meal-smoky.jpg','m-oriental.jpg'];
 
   const IMG = '/assets/img/';
   const $  = (s, c=document) => c.querySelector(s);
@@ -276,7 +275,7 @@
       const sizeSelect = card.querySelector('.size-select');
       if (sizeSelect) {
         sizeSelect.style.display = 'none';
-        card.querySelector('[data-price]').innerHTML = priceDisplay(m.sizes[0].p);
+        card.querySelector('[data-price]').innerHTML = priceDisplay(m.sizes[cfg.size || 0].p);
       }
       const addBtn = card.querySelector('.add');
       addBtn.classList.add('picking');
@@ -315,7 +314,7 @@
     if (!selectionMode) return;
     const entry = cart.get(selectionMode.offerId); if (!entry) return;
     const m = byId(itemId); if (!m) return;
-    entry.selections.push(m.name + (m.sizes ? ' (وسط)' : ''));
+    entry.selections.push(m.name + (m.sizes ? ` (${m.sizes[selectionMode.cfg.size || 0].l})` : ''));
     renderCart();
     if (entry.selections.length >= selectionMode.cfg.count) {
       exitSelectionMode(true);
